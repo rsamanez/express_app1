@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Users List
+  ul
+    each val in data
+      li 
+        div UserId: #{val.id}
+        div Name: #{val.name}
+        div Email: #{val.email}
+        div Address: #{val.address.street}  #{val.address.suite} 
+        div City: #{val.address.city}
+        div ZipCode: #{val.address.zipcode}
+        div Phone: #{val.phone}
+        div Website:
+          a(href=val.website , target="_blank") !{val.website}
+        div ------------------------------------
